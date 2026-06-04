@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión — Nexora Solutions</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <!-- ====== Header simplificado ====== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Logo de Nexora Solutions" width="32" height="32" />
+        <span>Nexora Solutions</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Volver al inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-main">
+    <section class="login-card">
+      <h1>Iniciar sesión</h1>
+      <p class="login-sub">Accede al panel de Nexora Solutions.</p>
+
+      <form id="loginForm" novalidate>
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" autocomplete="username" required />
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required />
+
+        <button type="submit" class="btn btn-login">Entrar</button>
+      </form>
+
+      <!-- Zona donde login.js mostrará el resultado de la validación -->
+      <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <!--
+    NOTA (Dev1 / task/auth-ui):
+    login.js invoca validarCredenciales(), pero esa función todavía NO existe.
+    La provee Dev2 en js/auth.js (task/auth-logic). Hasta integrar ese trabajo,
+    el formulario lanzará "validarCredenciales is not defined" en la consola.
+    Por eso aquí AÚN NO se incluye <script src="js/auth.js">.
+  -->
+  <script src="js/login.js"></script>
+</body>
+</html>
