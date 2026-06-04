@@ -1,0 +1,60 @@
+/* Estilos del módulo de inicio de sesión (Dev1 / task/auth-ui). */
+
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 0;
+  background: var(--bg-alt);
+  min-height: calc(100vh - 120px);
+}
+
+.login-card {
+  width: min(400px, 92%);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.login-card h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+.login-sub { color: var(--muted); margin-bottom: 1.5rem; }
+
+#loginForm { display: flex; flex-direction: column; gap: 0.4rem; }
+#loginForm label { font-weight: 600; margin-top: 0.6rem; }
+#loginForm input {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#loginForm input:focus {
+  outline: 2px solid var(--brand);
+  border-color: var(--brand);
+}
+
+.btn-login {
+  margin-top: 1.2rem;
+  background: var(--brand);
+  color: #fff;
+  width: 100%;
+}
+.btn-login:hover { background: var(--brand-dark); }
+
+.mensaje {
+  margin-top: 1rem;
+  font-weight: 600;
+  min-height: 1.4rem;
+  text-align: center;
+}
+.mensaje.ok { color: #047857; }
+.mensaje.error { color: #b91c1c; }
+
+.nav-login {
+  background: var(--brand);
+  color: #fff !important;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+}
+.nav-login:hover { background: var(--brand-dark); text-decoration: none; }
